@@ -37,7 +37,7 @@ The configuration details of each machine may be found below.
 | Jump-Box   | Gateway    | 10.0.0.4   | Linux            |
 | Web-1      | Web Server | 10.0.0.5   | Linux            |
 | Web-2      | Web Server | 10.0.0.6   | Linux            |
-| WEb-3      | Web Server | 10.0.0.7   | Linux            |
+| Web-3      | Web Server | 10.0.0.7   | Linux            |
 | ELK-Server | Monitoring | 10.1.0.4   | Linux            |
 
 ### Access Policies
@@ -48,7 +48,7 @@ Only the jump box machine can accept connections from the Internet. Access to th
 - 73.7.17.51
 
 Machines within the network can only be accessed by each other.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- All virtual machines in the Red_Team_Virtual_Network have access to the ELK VM because there are connected using peerings to the Elk-Net. The IP address subnet is 10.0.0.0/16.
 
 A summary of the access policies in place can be found in the table below.
 
