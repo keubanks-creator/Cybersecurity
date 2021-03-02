@@ -31,14 +31,14 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function   | IP Address | Operating System |
-|----------|------------|------------|------------------|
-| Jump Box | Gateway    | 10.0.0.4   | Linux            |
-| DVWA 1   | Web Server |            |                  |
-| DVWA 2   | Web Server |            |                  |
-| ELK      | Monitoring |            |                  |
+| Name       | Function   | IP Address | Operating System |
+|------------|------------|------------|------------------|
+| Jump-Box   | Gateway    | 10.0.0.4   | Linux            |
+| Web-1      | Web Server | 10.0.0.5   | Linux            |
+| Web-2      | Web Server | 10.0.0.6   | Linux            |
+| WEb-3      | Web Server | 10.0.0.7   | Linux            |
+| ELK-Server | Monitoring | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
@@ -52,12 +52,13 @@ Machines within the network can only be accessed by each other.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes                 | 10.0.0.1 10.0.0.2    |
-| DVWA 1   |                     |                      |
-| DVWA 2   |                     |                      |
-| ELK      |
+| Name       | Publicly Accessible | Allowed IP Addresses |
+|------------|---------------------|----------------------|
+| Jump-Box   | Yes                 | 10.0.0.1 10.0.0.2    |
+| Web-1      |                     |                      |
+| Web-2      |                     |                      |
+| Web-3      |                     |                      |
+| ELK-Server |                     |                      |
 
 ### Elk Configuration
 
