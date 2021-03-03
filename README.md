@@ -8,7 +8,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the .yml files may be used to install only certain pieces of the stack, such as Filebeat and/or Metricbeat.
 
-  - (ELK/Ansible/Elk/elk-playbook.yml)
+  - (keubanks-creator/Cybersecurity/Ansible/Elk/elk-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
