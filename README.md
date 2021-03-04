@@ -4,11 +4,11 @@
 
 The files in this repository were used to configure the network depicted below.
 
-  - (keubanks-creator/Cybersecurity/Diagrams/Homework12.png)
+  - https://github.com/keubanks-creator/Cybersecurity/blob/main/Diagrams/Homework12.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the .yml files may be used to install only certain pieces of the stack, such as Filebeat and/or Metricbeat.
 
-  - (keubanks-creator/Cybersecurity/Ansible/Elk/elk-playbook.yml)
+  - https://github.com/keubanks-creator/Cybersecurity/blob/main/Ansible/ELK/elk-playbook.yml
 
 This document contains the following details:
 - Description of the Topology
@@ -76,7 +76,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
- - (keubanks-creator/Cybersecurity/Ansible/Images/docker_ps.png)
+ - https://github.com/keubanks-creator/Cybersecurity/blob/main/Ansible/Images/docker-ps.png
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -100,5 +100,6 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the -config.yml files to the etc/ansible/ folder.
 - Update the hosts file to include your VM you want the playbook to run on. Add [elk] and the ELK IP of 10.1.0.4 and add [webservers] with the IP addresses of 10.0.0.5, 10.0.0.6, 10.0.0.7.
+- https://github.com/keubanks-creator/Cybersecurity/blob/main/Ansible/Ansible-Cfg/hosts.rtf
 - Run the playbooks, and navigate to [elkserverVM-IP]:5601 to check that the installation worked as expected.
 
