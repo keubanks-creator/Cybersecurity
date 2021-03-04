@@ -24,11 +24,13 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancers allow servers to spread the workload out evenly and can provide an extra layer of security by having an off-load function. In the case of a DOS attack, the balancer can direct all the traffic from the server to a public cloud provider. Adding a jump box to the network is a great security measure. 
+
+A jump box is used solely for administrative tasks, this saves the risk of admin details being used on the same computer that you websurf on, as that is easier for hackers to attack. Jump box's can have rules set so only specific IP addresses can access them, making them even more secure.  
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the network and system metrics.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- Filebeat detects changes to the filesystem. We have set this one up to collect apache logs. 
+- Metricbeat dectects changes to systems metrics, one example being changes in the CPU. Metricbeat as detects failed ssh and sudo attempts. 
 
 The configuration details of each machine may be found below.
 
@@ -52,13 +54,13 @@ Machines within the network can only be accessed by each other.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name       | Publicly Accessible | Allowed IP Addresses |
-|------------|---------------------|----------------------|
-| Jump-Box   | Yes                 | 73.7.17.51           |
-| Web-1      | No                  |                      |
-| Web-2      | No                  |                      |
-| Web-3      | No                  |                      |
-| ELK-Server | No                  |                      |
+| Name       | Publicly Accessible | Allowed IP Addresses                 |
+|------------|---------------------|--------------------------------------|
+| Jump-Box   | Yes                 | 73.7.17.51                           |
+| Web-1      | No                  | 10.0.0.4                             |
+| Web-2      | No                  | 10.0.0.4                             |
+| Web-3      | No                  | 10.0.0.4                             |
+| ELK-Server | No                  | 10.0.0.4 10.0.0.5 10.0.0.6 10.0.0.7  | 
 
 ### Elk Configuration
 
@@ -72,7 +74,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+ - (keubanks-creator/Cybersecurity/Ansible/Images/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
